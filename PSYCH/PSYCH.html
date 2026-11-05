@@ -477,7 +477,7 @@ function sessionHTML(m,s,idx){
     return `<div class="catrow"><span class="catl">${nm}</span><div class="catb">${body}</div></div>`; }).join(""));
   const rc = tags.filter(i=>i.w).map(i=>reviewLine(i,m)).join("");
   return `<div class="session ${done?"done":""}"><div class="check-col"><input type="checkbox" data-k="${k}" ${done?"checked":""}><div class="ses-num-label">#${idx}</div></div>
-   <div class="ses-type-col"><span class="ses-letter">${s.lbl||"Session "+s.l}</span><div class="ses-abs">${s.min===0?"":(s.min||50)+" min"}</div></div>
+   <div class="ses-type-col"><span class="ses-letter">Module ${m.n}, ${s.lbl||"Session "+s.l}</span><div class="ses-abs">${s.min===0?"":(s.min||50)+" min"}</div></div>
    <div class="ses-content">${rows}
    <div class="hw-label">Homework / notes</div><textarea class="hw-input ${S.note[nk]?"has-note":""}" data-n="${nk}" rows="1" placeholder="Notes for this session...">${esc(S.note[nk]||"")}</textarea></div></div>`;
 }
