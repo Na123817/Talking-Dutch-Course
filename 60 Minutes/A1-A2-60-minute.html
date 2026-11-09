@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talking Dutch A1-A2 Safira</title>
+<title>Talking Dutch A1-A2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -413,7 +413,7 @@ const MODS = [{"n": 1, "title": "Module 1", "sub": "", "cp": 0, "nw": 1, "ref": 
 const RES = [{"c_": "Workbooks", "n": "Taalcompleet A1", "u": "https://drive.google.com/file/d/1Zi8l0rhWHcAttqglevjVVtunlrUHqs7N/view?usp=drive_link", "d": ""}, {"c_": "Workbooks", "n": "Taalcompleet A2", "u": "https://drive.google.com/file/d/1v1O_4rOmOR5WZRlY0sxH559sxPKt1a2q/view?usp=drive_link", "d": ""}, {"c_": "Workbooks", "n": "Taalcompleet A2 audio", "u": "https://www.youtube.com/watch?v=-VeJ75e-mJI&list=PLl74A1LTuUSUaM9kmbs9jtqIWdkkRfnJ3", "d": ""}, {"c_": "Workbooks", "n": "Nederlands in actie", "u": "https://drive.google.com/file/d/1jLGtU6i3ZBP4ZMzobuTUYJ7gJE20vEi4/view?usp=drive_link", "d": ""}, {"c_": "Workbooks", "n": "Nederlands in actie audio", "u": "https://www.youtube.com/playlist?list=PLF-qJ8Ed0qHd7ToqP0Jvbq32T8fjeq8PH", "d": ""}, {"c_": "Workbooks", "n": "Nederlands in gang", "u": "https://drive.google.com/file/d/1PbEpRHI5-oI4bY5S28I72ZmpX7bs-oVZ/view?usp=drive_link", "d": ""}, {"c_": "Grammar", "n": "Grammatica in gebruik", "u": "https://drive.google.com/file/d/1EPMd0cMuuHdQwd_VQxOLzQ5wnXQlNKNX/view?usp=drive_link", "d": ""}, {"c_": "Grammar", "n": "Grammar videos (Dutch Today)", "u": "https://www.youtube.com/@dutchtoday", "d": ""}, {"c_": "Grammar", "n": "Dictees", "u": "https://onzetaal.nl/taalloket/oefenen-voor-dictees", "d": ""}, {"c_": "Exams", "n": "A2 - Lezen", "u": "https://www.inburgeren.nl/examen-doen/oefenen.jsp", "d": ""}, {"c_": "Exams", "n": "A2 - Luisteren", "u": "https://www.inburgeren.nl/examen-doen/oefenen.jsp", "d": ""}, {"c_": "Exams", "n": "A2 - Schrijven", "u": "https://www.inburgeren.nl/examen-doen/oefenen.jsp", "d": ""}, {"c_": "Exams", "n": "A2 - Spreken", "u": "https://www.inburgeren.nl/examen-doen/oefenen.jsp", "d": ""}, {"c_": "Other", "n": "Easy Dutch Podcasts", "u": "https://www.easydutchonline.com/podcast", "d": ""}, {"c_": "Other", "n": "NOS Nieuws", "u": "https://nos.nl", "d": ""}, {"c_": "Other", "n": "Easy Dutch", "u": "https://www.youtube.com/@EasyDutch", "d": ""}, {"c_": "Other", "n": "Korte verhalen", "u": "https://drive.google.com/file/d/1TC1WdVKc2_cuiPLmBdXvMPhvTVM31hEW/view?usp=drive_link", "d": ""}, {"c_": "Other", "n": "NOS Journaal", "u": "https://over.nos.nl/onze-programmas/journaal-in-makkelijke-taal/", "d": ""}, {"c_": "Other", "n": "De slimste mens", "u": "https://npo.nl/start/serie/de-slimste-mens/afleveringen/seizoen-29", "d": ""}];
 let _o=0; MODS.forEach(m=>{m.off=_o; _o+=m.ses.length;});
 const BASE = "td_a1a2_60";
-const PRESET = "Safira", PRESET_START = 0;
+const PRESET = "", PRESET_START = 0;
 const esc = s => String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const slug = n => n.trim().toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") || "student";
 function ls(fn){ try { return fn(); } catch(e) { return null; } }
