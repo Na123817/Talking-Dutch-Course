@@ -460,8 +460,8 @@ function reviewLine(it,m){
 }
 const A=(u,x,c)=>`<a class="${c||"fixed-link"}" href="${esc(u)}" target="_blank" rel="noopener">${x}</a>`;
 function link(it){
-  if (it.p) return it.p.map(p=>A(p.u,esc(p.t))+(p.a?" "+A(p.a,"+ audio"):"")).join(it.sep||" + ");
-  return it.u ? A(it.u,esc(it.t))+(it.a?" "+A(it.a,"+ audio"):"") : esc(it.t); }
+  if (it.p) return it.p.map(p=>A(p.u,esc(p.t))).join(it.sep||" + ");
+  return it.u ? A(it.u,esc(it.t)) : esc(it.t); }
 function sessionHTML(m,s,idx){
   const k=`chk_${m.n}_${s.l}`, nk=`note_${m.n}_${s.l}`, done=!!S.chk[k];
   const fixed = s.items.filter(i=>i.k==="w"||i.k==="g");

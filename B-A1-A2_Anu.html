@@ -746,8 +746,8 @@ for (let mod = 1; mod <= 32; mod++) {
       <div class="ses-content">
         <div class="fixed-line">
           ${wb.parts
-            ? wb.parts.map(p => `<a href="${p.url}" target="_blank" class="fixed-link">Taalcompleet ${p.text}</a>${p.audioUrl ? ` <a href="${p.audioUrl}" target="_blank" class="fixed-link">+ audio</a>` : ''}`).join(' &nbsp;|&nbsp; ')
-            : `<a href="${wb.url}" target="_blank" class="fixed-link">${wb.text}</a>${wb.audioUrl ? ` <a href="${wb.audioUrl}" target="_blank" class="fixed-link">+ audio</a>` : ''}`}
+            ? wb.parts.map(p => `<a href="${p.url}" target="_blank" class="fixed-link">Taalcompleet ${p.text}</a>`).join(' &nbsp;|&nbsp; ')
+            : `<a href="${wb.url}" target="_blank" class="fixed-link">${wb.text}</a>`}
           · 15 min &nbsp;|&nbsp;
           ${gr.parts ? gr.parts.map(p => `<a href="${p.url}" target="_blank" class="fixed-link">${p.text}</a>`).join(' + ') : `<a href="${gr.url}" target="_blank" class="fixed-link">${gr.text}</a>`}
           · 10 min
