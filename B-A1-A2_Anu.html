@@ -344,9 +344,9 @@
     .header-io-btn { width: 26px; height: 26px; font-size: 12px; }
   }
 
-  /* Notes: no scroll bar, box grows with the text, room for at least 20 lines */
-  .hw-input { max-height: none !important; overflow-y: hidden !important; line-height: 1.5; }
-  textarea.hw-input[placeholder^="Notes"] { min-height: calc(20 * 1.5em + 14px) !important; }
+  /* Notes: start as one line, grow while typing up to 20 lines, no visible scroll bar */
+  .hw-input { line-height: 1.5; min-height: calc(1.5em + 14px) !important; max-height: calc(20 * 1.5em + 14px) !important; overflow-y: auto !important; scrollbar-width: none; -ms-overflow-style: none; resize: none !important; }
+  .hw-input::-webkit-scrollbar { display: none; width: 0; height: 0; }
 </style>
 </head>
 <body>
