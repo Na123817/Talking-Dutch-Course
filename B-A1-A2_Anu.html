@@ -343,6 +343,10 @@
     .header-inner { flex-wrap: wrap; row-gap: 10px; }
     .header-io-btn { width: 26px; height: 26px; font-size: 12px; }
   }
+
+  /* Notes: no scroll bar, box grows with the text, room for at least 20 lines */
+  .hw-input { max-height: none !important; overflow-y: hidden !important; line-height: 1.5; }
+  textarea.hw-input[placeholder^="Notes"] { min-height: calc(20 * 1.5em + 14px) !important; }
 </style>
 </head>
 <body>
@@ -595,7 +599,7 @@ function importProgress(event) {
 
 function autoGrow(el) {
   el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 400) + 'px';
+  el.style.height = el.scrollHeight + 'px';
 }
 
 function getDone() {

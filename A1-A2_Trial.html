@@ -373,6 +373,10 @@
   .fxrow{padding:4px 0 8px}.fxt{font-weight:600;font-size:14px;color:var(--text)}.fxd{font-size:13px;color:var(--text-muted);margin-top:3px;line-height:1.5}.fxd b,.fxt b{color:var(--text)}
   .why{margin:0;padding:12px 18px;font-size:13px;color:var(--text-muted);line-height:1.55;border-bottom:1px solid var(--border);background:rgba(255,122,26,.05)}
   .res-item .ses-content span.nolink{font-size:14px;font-weight:500;color:var(--text)}
+
+  /* Notes: no scroll bar, box grows with the text, room for at least 20 lines */
+  .hw-input { max-height: none !important; overflow-y: hidden !important; line-height: 1.5; }
+  textarea.hw-input[placeholder^="Notes"] { min-height: calc(20 * 1.5em + 14px) !important; }
 </style>
 </head>
 <body>
