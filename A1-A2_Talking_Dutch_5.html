@@ -377,6 +377,13 @@
   /* Notes: start as one line, grow while typing up to 20 lines, no visible scroll bar */
   .hw-input { line-height: 1.5; min-height: calc(1.5em + 14px) !important; max-height: calc(20 * 1.5em + 14px) !important; overflow-y: auto !important; scrollbar-width: none; -ms-overflow-style: none; resize: none !important; }
   .hw-input::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+  /* Checkboxes: creamy white instead of bright white */
+  input[type=checkbox] { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; margin: 0; border-radius: 4px; background: #F3E7D3; border: 1px solid #d9c9ad; cursor: pointer; display: inline-grid; place-content: center; flex-shrink: 0; transition: background .15s, border-color .15s; }
+  input[type=checkbox]::before { content: ""; width: 10px; height: 10px; transform: scale(0); transition: transform .12s; background: #F3E7D3; clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%); }
+  input[type=checkbox]:checked { background: var(--accent); border-color: var(--accent); }
+  input[type=checkbox]:checked::before { transform: scale(1); }
+  input[type=checkbox]:focus-visible { outline: 2px solid var(--accent-border); outline-offset: 2px; }
 </style>
 </head>
 <body>
