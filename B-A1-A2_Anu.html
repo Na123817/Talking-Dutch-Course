@@ -474,9 +474,9 @@ const WERKBOEKEN = [
 ];
 
 const EXTRA_LINKS = [
-  {text: "Quizvds", url: "https://quizvds.it/nl-nl/test?srsltid=AU7gw4W-7ZSe5IBWTKrqRC8XMilUf9VIR8TxU2rhOHe-zl4iEh4GVR58"},
-  {text: "Oefenvragen EASA Categorie A1-A2 Drone Piloten", url: "https://drive.google.com/file/d/1yyoLVq1ka2T123NAAQ9sw77LPO9a3qCQ/view?usp=drive_link"},
-  {text: "Droneland", url: "https://droneland.nl/"}
+  {text: "Quizlet A1 + A2", label: "Quizlet", parts: [{text: "A1", url: "https://quizlet.com/ca/252876440/dutch-a1-flash-cards/"}, {text: "A2", url: "https://quizlet.com/nl/703632962/dutch-a2-flash-cards/"}]},
+  {text: "Hoe werkt een windturbine?", url: "https://www.kiwa.com/nl/nl/expertisegebieden/energietransitie/wind/hoe-werkt-een-windturbine/"},
+  {text: "Onderdelen van een windturbine", url: "https://halsteren.rwe.com/-/media/Project/Team/Halsteren/omgeving-en-natuur/hoe-werkt-een-windturbine.pdf"}
 ];
 
 let state = {};
@@ -760,7 +760,7 @@ for (let mod = 1; mod <= 32; mod++) {
           · 10 min
         </div>
         <div class="fixed-line">
-          ${EXTRA_LINKS.map(l => `<a href="${l.url}" target="_blank" class="fixed-link">${l.text}</a>`).join(' &nbsp;|&nbsp; ')}
+          ${EXTRA_LINKS.map(l => l.parts ? l.parts.map((p, i) => `<a href="${p.url}" target="_blank" class="fixed-link">${i === 0 ? l.label + ' ' : ''}${p.text}</a>`).join(' + ') : `<a href="${l.url}" target="_blank" class="fixed-link">${l.text}</a>`).join(' &nbsp;|&nbsp; ')}
         </div>
         <div class="tags">${t.tags.map(tg => `<a href="${tg.url}" target="_blank" class="tag ${tg.cls}" style="text-decoration:none;">${tg.text}</a>`).join('')}</div>
         <div class="hw-section">
