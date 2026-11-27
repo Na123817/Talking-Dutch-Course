@@ -490,7 +490,7 @@ function sessionHTML(m,s,idx){
   return `<div class="session ${done?"done":""}"><div class="check-col"><input type="checkbox" data-k="${k}" ${done?"checked":""}><div class="ses-num-label">#${idx}</div></div>
    <div class="ses-type-col"><span class="ses-letter">Module ${m.n}, ${s.lbl||"Session "+s.l}</span><div class="ses-abs">${s.min===0?"":(s.min||50)+" min"}</div></div>
    <div class="ses-content">${rows}
-   <div class="hw-label">Homework / notes</div><textarea class="hw-input ${S.note[nk]?"has-note":""}" data-n="${nk}" rows="1" placeholder="Notes for this session...">${esc(S.note[nk]||"")}</textarea></div></div>`;
+   <div class="hw-label">Homework / notes</div><textarea autocomplete="off" class="hw-input ${S.note[nk]?"has-note":""}" data-n="${nk}" rows="1" placeholder="Notes for this session...">${esc(S.note[nk]||"")}</textarea></div></div>`;
 }
 function modDone(m){ return m.ses.filter(s=>S.chk[`chk_${m.n}_${s.l}`]).length; }
 function render(){
@@ -505,7 +505,7 @@ function render(){
       <div class="mod-right"><div class="mod-bar-wrap"><div class="mod-bar-bg"><div class="mod-bar-fill" style="width:${d/m.ses.length*100}%"></div></div><span class="mod-count">${d}/${m.ses.length}</span></div>
       <svg class="chevron ${isOpen?"open":""}" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div></div>
      <div class="module-body ${isOpen?"open":""}">
-      ${m.why?`<p class="why">${m.why}</p>`:""}${m.cp||m.nw?"":`<div class="words-box"><div class="hw-label">Words of this module (5–10, phrases too)</div><textarea class="hw-input ${S.words[m.n]?"has-note":""}" data-w="${m.n}" rows="2" placeholder="e.g. de boodschappen – de winkelwagen – afrekenen">${esc(S.words[m.n]||"")}</textarea></div>`}
+      ${m.why?`<p class="why">${m.why}</p>`:""}${m.cp||m.nw?"":`<div class="words-box"><div class="hw-label">Words of this module (5–10, phrases too)</div><textarea autocomplete="off" class="hw-input ${S.words[m.n]?"has-note":""}" data-w="${m.n}" rows="2" placeholder="e.g. de boodschappen – de winkelwagen – afrekenen">${esc(S.words[m.n]||"")}</textarea></div>`}
       ${m.ses.map((s,i)=>sessionHTML(m,s,m.off+i+1)).join("")}</div></div>`; }).join("");
   applyFilter(); stats(); document.querySelectorAll("textarea").forEach(grow);
 }
